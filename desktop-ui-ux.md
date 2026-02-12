@@ -42,20 +42,41 @@ A cornerstone of desktop productivity software.
 -   **Density**: Allow users to toggle between "Compact" and "Comfortable" row heights.
 -   **Pagination**: Use pagination for datasets > 100 items. Provide "Rows per page" control.
 
-## 5. Contextual Menus (Right-Click)
+## 5. Dashboard Design
+
+Dashboards provide an at-a-glance view of key metrics.
+
+-   **Widgets**: Use cards to group related data. Allow users to resize or rearrange widgets if possible.
+-   **Customization**: Let users choose *what* metrics matter to them (e.g., "Add Widget" button).
+-   **Visualization**: Use charts (Line, Bar, Pie) appropriately.
+    -   *Line Chart*: Trends over time.
+    -   *Bar Chart*: Comparing categories.
+    -   *Pie Chart*: Showing parts of a whole (use sparingly, < 5 slices).
+
+## 6. Multi-Select & Bulk Actions
+
+Power users need to perform actions on multiple items at once.
+
+-   **Selection**: Checkboxes in lists/tables.
+    -   *Shift + Click*: Select a range of items.
+    -   *Ctrl/Cmd + Click*: Toggle selection of individual items.
+-   **Action Bar**: When items are selected, show a contextual toolbar (floating or fixed) with actions like "Delete", "Move", or "Archive".
+-   **"Select All"**: Include a master checkbox to select all visible items (or all items across pages).
+
+## 7. File Management
+
+Desktop apps often deal with files.
+
+-   **Drag and Drop Zones**: Large, clear areas to drop files. Highlight the area on drag over.
+-   **Progress Tracking**: Show a progress bar for uploads/downloads. Don't block the UI; allow background processing.
+-   **Previews**: Allow users to preview files (images, PDFs) without opening external applications.
+
+## 8. Contextual Menus (Right-Click)
 
 The right mouse button is a powerful tool for discovering actions related to a specific object.
 
 -   **Relevance**: Show only actions relevant to the selected item (e.g., "Open," "Rename," "Delete" for a file).
 -   **Consistency**: Ensure the most common actions are also available in the main UI or toolbar. Do not hide critical functionality *only* in a context menu.
-
-## 6. Drag and Drop
-
-A core expectation on desktop.
-
--   **Files**: Allow dragging files from the OS file explorer into the app.
--   **Reordering**: Allow reordering of list items, tabs, or Kanban cards via drag and drop.
--   **Feedback**: Provide clear visual cues (e.g., ghost image, insertion line) during the drag operation.
 
 ---
 

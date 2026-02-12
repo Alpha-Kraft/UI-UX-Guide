@@ -107,7 +107,34 @@ Don't leave the user staring at a blank screen when there is no data.
 </div>
 ```
 
-## 6. Performance as UX
+## 6. Search Experience
+
+Search is often the primary navigation method.
+
+-   **Auto-Complete**: Suggest search terms as the user types. Highlight matched characters in bold.
+-   **Recent Searches**: Show recent queries when the search field is focused.
+-   **Results Page**:
+    -   *Layout*: List or grid view toggle.
+    -   *Filters*: Sidebar filters for complex data (e.g., E-commerce).
+    -   *No Results*: "We couldn't find 'xyz'. Did you mean 'abc'?" + Popular categories.
+
+## 7. Progress Indicators
+
+Communicate status clearly for multi-step processes.
+
+-   **Steppers**: Use for linear workflows (e.g., Checkout: Shipping -> Payment -> Review). Show "Completed", "Active", and "Pending" states clearly.
+-   **Progress Bars**: Use for loading deterministically (e.g., File Upload: 45%).
+-   **Spinners**: Use for indeterminate loading (e.g., "Fetching data...").
+
+## 8. Notifications
+
+Use the right level of interruption.
+
+-   **Toasts (Snackbars)**: Non-blocking, auto-dismissing messages (e.g., "File saved"). Display at top-right (desktop) or bottom-center (mobile).
+-   **Banners**: Persistent messages within the content area (e.g., "Your trial expires in 3 days"). Require user dismissal.
+-   **Modals**: Blocking, critical messages (e.g., "Session expired"). Use sparingly.
+
+## 9. Performance as UX
 
 A slow interface feels unprofessional.
 -   **Loading States**: Use skeletons (gray placeholders) instead of generic spinners for content loading.

@@ -19,13 +19,14 @@ Foundational rules that apply to all platforms.
 -   Typography & Hierarchy
 -   Spacing & Grid Systems
 -   Accessibility & Iconography
--   Motion & Animation
+-   Motion, Animation, & Micro-Interactions
+-   UX Copywriting
 
 ### 2. Platform-Specific Guidelines
 
--   **[Web UI/UX](./web-ui-ux.md)**: Responsive 12-column grids, Mega Menus, Empty States.
--   **[Mobile UI/UX](./mobile-ui-ux.md)**: Safe Areas, Native Components (iOS vs Android), Gestures.
--   **[Desktop UI/UX](./desktop-ui-ux.md)**: Data Tables, Keyboard Strategy, Window Management.
+-   **[Web UI/UX](./web-ui-ux.md)**: Responsive Grids, Navigation, Search, Notifications.
+-   **[Mobile UI/UX](./mobile-ui-ux.md)**: Touch Targets, Gestures, Onboarding, Permissions.
+-   **[Desktop UI/UX](./desktop-ui-ux.md)**: Data Tables, Dashboards, File Management, Shortcuts.
 
 ### 3. [Component Library](./components/)
 Specific implementation details and code samples for common UI elements.
@@ -34,6 +35,9 @@ Specific implementation details and code samples for common UI elements.
 -   [Cards](./components/cards.md)
 -   [Modals](./components/modals.md)
 -   [Data Tables](./components/data-tables.md)
+-   [Tabs](./components/tabs.md)
+-   [Toasts](./components/toasts.md)
+-   [Tooltips](./components/tooltips.md)
 
 ## Getting Started
 

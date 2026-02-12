@@ -108,6 +108,32 @@ Motion should be purposeful, not decorative. It guides the user's attention and 
     -   *Linear*: Use only for continuous loops (spinners).
 -   **Purpose**: Use motion to show *continuity* (e.g., a card expanding into a detail view) or *feedback* (e.g., a shake animation for an invalid password).
 
+## 8. Micro-Interactions
+
+Micro-interactions are single-task based interactions that provide feedback and improve user experience.
+
+-   **Definition**: Subtle animations or state changes responding to user input.
+-   **Principles**:
+    -   *Fast*: Feedback must be instant (< 100ms perception).
+    -   *Subtle*: Should not distract from the main task.
+    -   *Meaningful*: Must communicate status (e.g., a "loading" spinner inside a button after clicking "Save").
+-   **Examples**:
+    -   A "Like" button turning red and popping slightly.
+    -   A toggle switch sliding from off to on.
+    -   Input field border turning red on error.
+
+## 9. UX Copywriting
+
+Words are part of the design. The tone should be professional, concise, and human.
+
+-   **Tone**: Helpful, direct, and polite. Avoid robotic language ("Invalid Input") or overly casual slang ("Whoopsie!").
+-   **Clarity**: Use simple words. "Buy" is better than "Purchase". "Join" is better than "Register".
+-   **Error Messages**:
+    -   *Bad*: "Error 500."
+    -   *Better*: "Something went wrong."
+    -   *Best*: "We couldn't save your changes. Please check your connection and try again."
+-   **Labels**: Be consistent. If you use "Sign In" on one page, don't use "Log In" on another.
+
 ---
 
 [Next: Web UI/UX Guidelines](./web-ui-ux.md) | [Back to Home](./README.md)

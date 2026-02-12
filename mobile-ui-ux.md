@@ -60,6 +60,30 @@ Design for how people hold their phones.
 -   **Visual Feedback**: Instant color change (ripple on Android, opacity drop on iOS) on tap.
 -   **Haptic Feedback**: Use subtle vibrations (Taptic Engine) for success, error, or selection changes.
 
+## 7. Onboarding
+
+First impressions matter.
+
+-   **Walkthroughs**: Keep them short (max 3 screens). Only show critical features. Allow "Skip".
+-   **Empty States**: Use empty states as educational opportunities. "Create your first project" is better than "No projects".
+-   **"Aha!" Moment**: Guide users to the core value of the app as quickly as possible. Don't ask for sign-up before showing value.
+
+## 8. Permissions
+
+Permissions (Camera, Location, Push) are sensitive.
+
+-   **Contextual Ask**: Don't ask for permissions on launch. Ask when the user *initiates* a feature that needs it (e.g., clicking "Add Photo").
+-   **Explain Why**: "We need camera access to scan QR codes" (Pre-permission dialog).
+-   **Denial Handling**: If denied, show a UI explaining how to enable it in Settings if they change their mind.
+
+## 9. Offline States
+
+Mobile connections are flaky.
+
+-   **Cached Content**: Always show cached data first. Don't show a blank screen while loading.
+-   **Indicators**: Show a subtle "You are offline" banner if the app needs connectivity.
+-   **Queueing**: Allow actions (like "Like" or "Save") to be queued and synced when back online.
+
 ---
 
 [Next: Desktop UI/UX Guidelines](./desktop-ui-ux.md) | [Back to Home](./README.md)
