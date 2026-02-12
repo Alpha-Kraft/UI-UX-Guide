@@ -12,15 +12,28 @@ We use a **fluid grid system** that adapts to breakpoints.
 -   **Laptop**: ≥ 992px (Maximum container width 960px)
 -   **Desktop**: ≥ 1200px (Maximum container width 1140px)
 
-### CSS Grid & Flexbox
-Prefer modern layout techniques over float-based grids.
+### The 12-Column Grid
+A standard 12-column grid provides flexibility for almost any layout.
 
 ```css
-/* Example: Responsive Card Grid */
-.card-grid {
+/* Example: CSS Grid Container */
+.grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px; /* 3 units of 8px */
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px; /* Gutter width */
+}
+
+/* Span classes */
+.col-12 { grid-column: span 12; }
+.col-6  { grid-column: span 6; }
+.col-4  { grid-column: span 4; }
+.col-3  { grid-column: span 3; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .col-6, .col-4, .col-3 {
+    grid-column: span 12; /* Stack on mobile */
+  }
 }
 ```
 
@@ -28,11 +41,16 @@ Prefer modern layout techniques over float-based grids.
 
 Navigation should be intuitive and consistent.
 
--   **Header**: Keep it sticky or visible.
--   **Links**: Links within text paragraphs must be underlined or have a distinct color (contrast > 3:1 against surrounding text).
--   **Breadcrumbs**: Essential for deep hierarchies (e.g., E-commerce, Documentation).
+### Header Navigation
+-   **Sticky Headers**: Keep headers visible but shrink them on scroll to save space.
+-   **Mega Menus**: Use for sites with deep hierarchies (e.g., E-commerce). Group links by category with clear headings. Do not nest menus more than 2 levels deep in a dropdown.
 
-### States
+### Pagination vs. Infinite Scroll
+-   **Pagination**: Best for goal-oriented tasks (e.g., finding a specific order, search results). Allows the user to reach the footer.
+-   **Infinite Scroll**: Best for exploration (e.g., social feeds). **Warning**: Accessibility nightmare if not handled correctly. Users cannot reach the footer.
+
+## 3. Interaction States
+
 Every interactive element must have defined states:
 1.  **Default**: The resting state.
 2.  **Hover**: Visual feedback when the cursor is over the element (Desktop only).
@@ -64,23 +82,32 @@ Every interactive element must have defined states:
 }
 ```
 
-## 3. Forms and Inputs
+## 4. Forms and Inputs
 
 Forms are the primary way users interact with web applications. Clarity is key.
 
--   **Labels**: Always place labels *above* the input field for best readability on all screen sizes.
--   **Placeholders**: Do not use placeholders as replacements for labels. They disappear when the user types.
--   **Validation**:
-    -   Show errors inline, immediately after the field.
-    -   Use clear, helpful error messages (e.g., "Email is required" instead of just "Error").
-    -   Don't rely on color alone (use an icon or text prefix).
+-   **Labels**: Always place labels *above* the input field.
+-   **Placeholders**: Do not use placeholders as replacements for labels.
+-   **Inline Validation**: Show positive validation (green check) for complex fields (username availability) and immediate error messages for formatting issues.
 
-## 4. Typography on the Web
+## 5. Empty States
 
--   **Line Length**: optimal line length for reading is 45-75 characters.
--   **Web Fonts**: Use `woff2` format for best performance. Implement `font-display: swap` to avoid invisible text during loading.
+Don't leave the user staring at a blank screen when there is no data.
 
-## 5. Performance as UX
+-   **Illustration**: Use a subtle, grayscale illustration (no cartoons) to indicate emptiness.
+-   **Text**: "No projects found" (Clear status) + "Create a new project to get started" (Call to action).
+-   **Action**: Provide a button to resolve the empty state immediately.
+
+```html
+<div class="empty-state">
+  <img src="/assets/empty-box.svg" alt="" aria-hidden="true">
+  <h3>No documents yet</h3>
+  <p>Upload a document to start collaborating.</p>
+  <button class="btn btn-primary">Upload Document</button>
+</div>
+```
+
+## 6. Performance as UX
 
 A slow interface feels unprofessional.
 -   **Loading States**: Use skeletons (gray placeholders) instead of generic spinners for content loading.

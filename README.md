@@ -15,22 +15,25 @@ Our design philosophy is centered on **professionalism, clarity, and utility**. 
 
 ### 1. [General Principles](./general-principles.md)
 Foundational rules that apply to all platforms.
--   Color Palette & Usage
+-   Color Palette & Dark Mode
 -   Typography & Hierarchy
 -   Spacing & Grid Systems
--   Accessibility Standards
+-   Accessibility & Iconography
+-   Motion & Animation
 
 ### 2. Platform-Specific Guidelines
 
--   **[Web UI/UX](./web-ui-ux.md)**: Responsive design, navigation patterns, and web interactivity.
--   **[Mobile UI/UX](./mobile-ui-ux.md)**: Touch targets, gestures, and mobile app patterns (iOS & Android).
--   **[Desktop UI/UX](./desktop-ui-ux.md)**: complex workflows, keyboard shortcuts, and window management.
+-   **[Web UI/UX](./web-ui-ux.md)**: Responsive 12-column grids, Mega Menus, Empty States.
+-   **[Mobile UI/UX](./mobile-ui-ux.md)**: Safe Areas, Native Components (iOS vs Android), Gestures.
+-   **[Desktop UI/UX](./desktop-ui-ux.md)**: Data Tables, Keyboard Strategy, Window Management.
 
 ### 3. [Component Library](./components/)
 Specific implementation details and code samples for common UI elements.
 -   [Buttons](./components/buttons.md)
 -   [Forms](./components/forms.md)
 -   [Cards](./components/cards.md)
+-   [Modals](./components/modals.md)
+-   [Data Tables](./components/data-tables.md)
 
 ## Getting Started
 

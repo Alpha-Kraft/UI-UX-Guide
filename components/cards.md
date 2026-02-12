@@ -2,11 +2,19 @@
 
 Cards are flexible containers that group related content and actions. They are widely used for lists, grids, and dashboards.
 
+## Anatomy
+
+1.  **Container**: The background surface, typically white (`#ffffff`) with a border or shadow.
+2.  **Header (Optional)**: Contains a title, icon, or menu button.
+3.  **Media (Optional)**: Image or video at the top (or left/right in landscape).
+4.  **Body**: The main content area (description, stats).
+5.  **Actions (Optional)**: Buttons or links at the bottom (e.g., "Read More", "Like").
+
 ## Design Principles
 
 1.  **Containment**: A card must clearly define its boundaries with a border or shadow.
 2.  **Hierarchy**: Use typography and spacing to create a clear visual hierarchy within the card (e.g., Title > Description > Metadata > Action).
-3.  **Interaction**: The entire card can be clickable (common in mobile) or contain specific interactive elements (buttons).
+3.  **Interaction**: The entire card can be clickable (common in mobile) or contain specific interactive elements (buttons). **Avoid** putting interactive elements (like buttons) inside a clickable card (nested interactive areas).
 
 ## Code Example (CSS)
 
@@ -23,10 +31,15 @@ Cards are flexible containers that group related content and actions. They are w
   flex-direction: column;
 }
 
-/* Hover State (Desktop) */
+/* Hover State (Desktop) - Lift Effect */
 .card:hover {
   transform: translateY(-2px); /* Slight lift */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+}
+
+/* Focus State (Keyboard) */
+.card:focus-within {
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
 }
 
 /* Card Content Areas */
@@ -69,6 +82,10 @@ Cards are flexible containers that group related content and actions. They are w
 
 -   **Grid Layout**: Cards work best in a responsive grid (`display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));`).
 -   **Mobile**: On mobile, cards often stack vertically and take full width. Consider removing shadows and using full-width dividers for a cleaner list view on small screens.
+
+## Accessibility (ARIA)
+-   Headings inside cards should follow the page hierarchy (e.g., if the page title is `h1`, card titles should be `h2` or `h3`).
+-   If the entire card is clickable, use a semantic link (`<a>`) wrapping the content, or use JavaScript with `role="link"` and handle `Enter`/`Space` keys.
 
 ---
 

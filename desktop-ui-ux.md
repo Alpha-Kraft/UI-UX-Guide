@@ -18,13 +18,13 @@ Desktop apps exist within a windowed environment.
 -   **Multiple Windows**: Allow users to open multiple instances (e.g., multiple document tabs or separate windows) for multitasking.
 -   **Modals**: Use sparingly. Prefer non-blocking panels or inline editing to keep the user in context.
 
-## 3. Keyboard Interaction
+## 3. Keyboard Interaction & Strategy
 
 Power users rely on keyboards for speed.
 
 -   **Shortcuts**: Implement standard shortcuts (`Ctrl/Cmd + C` for copy, `S` for save, `Z` for undo).
--   **Tab Order**: Logical tab order (left-to-right, top-to-bottom) is critical for form navigation.
--   **Focus Indicators**: Visible focus rings are mandatory for keyboard accessibility.
+-   **Mnemonics**: Underlined letters in menus (e.g., **F**ile) accessible via `Alt` key (Windows/Linux).
+-   **Global Shortcuts**: If applicable, allow users to trigger actions even when the app is minimized (e.g., media keys).
 
 | Action | Windows/Linux | macOS |
 | :--- | :--- | :--- |
@@ -33,19 +33,21 @@ Power users rely on keyboards for speed.
 | **Close Window** | `Alt + F4` or `Ctrl + W` | `Cmd + W` |
 | **Preferences** | `Ctrl + ,` (app specific) | `Cmd + ,` |
 
-## 4. Contextual Menus (Right-Click)
+## 4. Data Tables
+
+A cornerstone of desktop productivity software.
+
+-   **Sorting**: Clickable column headers with arrows indicating sort direction.
+-   **Filtering**: Advanced filters above the table or in a sidebar.
+-   **Density**: Allow users to toggle between "Compact" and "Comfortable" row heights.
+-   **Pagination**: Use pagination for datasets > 100 items. Provide "Rows per page" control.
+
+## 5. Contextual Menus (Right-Click)
 
 The right mouse button is a powerful tool for discovering actions related to a specific object.
 
 -   **Relevance**: Show only actions relevant to the selected item (e.g., "Open," "Rename," "Delete" for a file).
 -   **Consistency**: Ensure the most common actions are also available in the main UI or toolbar. Do not hide critical functionality *only* in a context menu.
-
-## 5. Tooltips & Hover States
-
-Since desktop users have a cursor, leverage hover states for discovery.
-
--   **Tooltips**: Show helpful descriptions when hovering over icon-only buttons or truncated text.
--   **Hover Effects**: Subtle background changes or borders indicate interactivity.
 
 ## 6. Drag and Drop
 

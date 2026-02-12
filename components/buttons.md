@@ -2,6 +2,13 @@
 
 Buttons are the primary way users take action. They should be clear, concise, and indicate their purpose.
 
+## Anatomy
+
+1.  **Container**: The button shape itself. Its color, border, and shadow define its prominence.
+2.  **Label**: The text (verb) describing the action.
+3.  **Icon (Optional)**: A visual cue (e.g., "+" or "trash can") placed before or after the label.
+4.  **Focus Ring**: Visible outline when focused via keyboard.
+
 ## Button Types
 
 1.  **Primary**: The main action of a screen (e.g., "Submit", "Save", "Sign Up"). Use only one per view to guide focus.
@@ -34,14 +41,30 @@ Buttons are the primary way users take action. They should be clear, concise, an
   color: #ffffff;
 }
 
+/* Hover State: Slightly Darker */
 .btn-primary:hover {
   background-color: #004494;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Active State: Pressed Effect */
 .btn-primary:active {
   background-color: #003366;
   transform: translateY(1px);
+}
+
+/* Focus State: High Contrast Ring */
+.btn-primary:focus-visible {
+  outline: 2px solid #0056b3;
+  outline-offset: 2px;
+}
+
+/* Disabled State */
+.btn-primary:disabled {
+  background-color: #e9ecef;
+  color: #adb5bd;
+  cursor: not-allowed;
+  box-shadow: none;
 }
 
 /* Secondary Button */
@@ -72,6 +95,12 @@ Buttons are the primary way users take action. They should be clear, concise, an
   color: white;
 }
 ```
+
+## Accessibility (ARIA)
+-   `role="button"`: Use if creating a button with a `<div>` or `<span>` (not recommended; use `<button>`).
+-   `aria-label`: Use if the button contains only an icon (e.g., an "X" close button).
+-   `aria-disabled="true"`: Use to communicate disabled state to screen readers if the `disabled` attribute is not applicable.
+-   `tabindex="0"`: Ensure custom buttons are focusable.
 
 ## Do's and Don'ts
 

@@ -13,16 +13,16 @@ Our color strategy is **professional, subtle, and functional**. We avoid overly 
 
 ### Professional Palette Examples
 
-| Usage | Color Name | Hex Code | Description |
-| :--- | :--- | :--- | :--- |
-| **Primary Action** | Corporate Blue | `#0056b3` | Primary buttons, links, active states. |
-| **Secondary Action** | Slate Gray | `#6c757d` | Secondary buttons, less important text. |
-| **Background** | Clean White | `#ffffff` | Main content background. |
-| **Surface** | Light Gray | `#f8f9fa` | Card backgrounds, sidebars. |
-| **Text Primary** | Dark Charcoal | `#212529` | Headings, body text (high contrast). |
-| **Text Secondary** | Muted Gray | `#495057` | Metadata, hints (medium contrast). |
-| **Error** | Muted Red | `#dc3545` | Validation errors (avoid neon red). |
-| **Success** | Muted Green | `#28a745` | Success messages (avoid neon green). |
+| Usage | Color Name | Hex Code (Light) | Hex Code (Dark) | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **Primary Action** | Corporate Blue | `#0056b3` | `#4da3ff` | Primary buttons, links, active states. |
+| **Secondary Action** | Slate Gray | `#6c757d` | `#aeb5bc` | Secondary buttons, less important text. |
+| **Background** | Clean White | `#ffffff` | `#121212` | Main content background. |
+| **Surface** | Light Gray | `#f8f9fa` | `#1e1e1e` | Card backgrounds, sidebars. |
+| **Text Primary** | Dark Charcoal | `#212529` | `#e9ecef` | Headings, body text (high contrast). |
+| **Text Secondary** | Muted Gray | `#495057` | `#adb5bd` | Metadata, hints (medium contrast). |
+| **Error** | Muted Red | `#dc3545` | `#e57373` | Validation errors (avoid neon red). |
+| **Success** | Muted Green | `#28a745` | `#81c784` | Success messages (avoid neon green). |
 
 **Tip**: Always check contrast ratios. Primary text on white backgrounds should have a contrast ratio of at least 4.5:1.
 
@@ -76,6 +76,37 @@ Accessibility is not optional. A professional product is usable by everyone.
 2.  **Focus States**: Never remove outline styles on focusable elements without providing a clear alternative. Focus indicators should be visible and high-contrast.
 3.  **Semantic HTML**: Use proper tags (`<button>`, `<a>`, `<input>`, `<label>`) for their intended purpose.
 4.  **Alt Text**: All meaningful images must have descriptive `alt` text. Decorative images should have `alt=""`.
+
+## 5. Dark Mode
+
+Designing for dark mode requires more than just inverting colors.
+
+-   **Elevation**: Use lighter grays (`#1e1e1e`, `#2c2c2c`) to indicate elevation (cards, modals) rather than shadows, which are less visible on dark backgrounds.
+-   **Desaturation**: Avoid fully saturated colors. Bright blue on black causes eye strain. Use a desaturated blue (e.g., `#4da3ff` instead of `#0056b3`).
+-   **Text**: Avoid pure white text (`#ffffff`) on pure black (`#000000`). Use off-white (`#e9ecef`) on dark gray (`#121212`) to reduce harsh contrast.
+
+## 6. Iconography
+
+Icons should be clear, metaphorical, and consistent.
+
+-   **Stroke Weight**: Use a consistent stroke width (e.g., 1.5px or 2px) for all icons.
+-   **Style**: Choose *either* outlined (more modern, airy) or filled (more solid, better for active states). Do not mix styles unless indicating state (e.g., heart outline = unliked, heart filled = liked).
+-   **Optical Alignment**: Center icons optically, not just mathematically. Some shapes (triangles, circles) need to shift slightly to look centered.
+-   **Size**: Standard icon sizes are 16px, 20px, 24px.
+
+## 7. Motion & Animation
+
+Motion should be purposeful, not decorative. It guides the user's attention and explains relationships between elements.
+
+-   **Duration**:
+    -   *Fast (100-200ms)*: Hover effects, toggles, button clicks.
+    -   *Normal (200-300ms)*: Modals opening, dropdowns expanding.
+    -   *Slow (300-500ms)*: Large page transitions.
+-   **Easing**:
+    -   *Ease-Out*: Use for entering elements (starts fast, slows down). Feels natural.
+    -   *Ease-In*: Use for exiting elements (starts slow, speeds up).
+    -   *Linear*: Use only for continuous loops (spinners).
+-   **Purpose**: Use motion to show *continuity* (e.g., a card expanding into a detail view) or *feedback* (e.g., a shake animation for an invalid password).
 
 ---
 
