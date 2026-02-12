@@ -30,12 +30,35 @@ Foundational rules that apply to all platforms.
 
 ### 3. [Component Library](./components/)
 Specific implementation details and code samples for common UI elements.
--   [Buttons](./components/buttons.md)
--   [Forms](./components/forms.md)
+
+#### Navigation & Structure
+-   [Accordions](./components/accordions.md)
+-   [Breadcrumbs](./components/breadcrumbs.md)
 -   [Cards](./components/cards.md)
--   [Modals](./components/modals.md)
--   [Data Tables](./components/data-tables.md)
+-   [Dividers](./components/dividers.md)
+-   [Lists](./components/lists.md)
+-   [Modals (Dialogs)](./components/modals.md)
+-   [Pagination](./components/pagination.md)
+-   [Steps (Stepper)](./components/steps.md)
 -   [Tabs](./components/tabs.md)
+
+#### Inputs & Selection
+-   [Buttons](./components/buttons.md)
+-   [Checkboxes & Radios](./components/checkboxes-radios.md)
+-   [Dropdowns (Selects)](./components/dropdowns.md)
+-   [Forms](./components/forms.md)
+-   [Sliders](./components/sliders.md)
+-   [Switches (Toggles)](./components/switches.md)
+-   [Text Areas](./components/text-areas.md)
+
+#### Content & Display
+-   [Avatars](./components/avatars.md)
+-   [Data Tables](./components/data-tables.md)
+
+#### Feedback & Status
+-   [Badges & Tags](./components/badges-tags.md)
+-   [Progress Bars](./components/progress-bars.md)
+-   [Skeletons (Loading)](./components/skeletons.md)
 -   [Toasts](./components/toasts.md)
 -   [Tooltips](./components/tooltips.md)
 
